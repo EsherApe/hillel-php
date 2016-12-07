@@ -78,6 +78,26 @@ class InternetStoreDb {
 
     /**
      * @param int $id
+     * @return array
+     */
+    public function getProductItem($id)
+    {
+        $result = [];
+        try {
+            $sql = "SELECT id, product_name, product_price, product_desc, product_img_link FROM products WHERE id = :id";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':id', $id, PDO::PARAM_INT);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "ошибка при извлечении записей <br>";
+            echo $e->getMessage();
+        }
+        return $result;
+    }
+
+    /**
+     * @param int $id
      * @return bool
      */
     public function deleteProduct($id)

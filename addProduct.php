@@ -34,8 +34,8 @@ session_start();
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.php">Главная</a></li>
-                            <li><a href="ordersList.php">Заказы</a></li>
+                            <li><a href="index.php">Main</a></li>
+                            <li><a href="ordersList.php">Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -50,13 +50,13 @@ session_start();
                             unset($_SESSION['error']); ?>
                         </div>
                     <?php endif; ?>
-                    <h2>Добавьте товар!</h2>
+                    <h2>Add product!</h2>
                     <div class="form-group">
-                        <label for="product_name">Название товара:</label>
+                        <label for="product_name">Product name:</label>
                         <input type="text" class="form-control" id="product_name" name="product_name" required>
                     </div>
                     <div class="form-group">
-                        <label for="product_price">Цена:</label>
+                        <label for="product_price">Price:</label>
 
                         <div class="input-group">
                             <input type="text" class="form-control" name="product_price" id="product_price" required>
@@ -64,12 +64,12 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="product_desc">Краткое описание:</label>
+                        <label for="product_desc">Description:</label>
                         <textarea name="product_desc" id="product_desc" class="form-control" cols="30" rows="10"
                                   required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="product_img_link">Ссылка на изображение:</label>
+                        <label for="product_img_link">Image link:</label>
                         <input type="text" name="product_img_link" id="product_img_link" class="form-control" required>
                     </div>
                     <button type="submit" class="btn btn-default">Отправить</button>

@@ -34,15 +34,15 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="addProduct.php">Добавить товар</a></li>
-                            <li><a href="ordersList.php">Заказы</a></li>
+                            <li><a href="addProduct.php">Add product</a></li>
+                            <li><a href="ordersList.php">Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
         <main class="main">
-            <h1 class="text-center">Смартфоны</h1>
+            <h1 class="text-center">Smartphones</h1>
             <hr>
             <div class="row">
                 <?php foreach ($db->getProducts() as $product): ?>
@@ -50,20 +50,20 @@
                         <div class="thumbnail">
                             <a href="productView.php?productId=<?= $product['id'] ?>">
                                 <img src="img/Phones/<?= $product['product_img_link'] ?>"
-                                     alt="<?= $product['product_name'] ?>" class="img-responsive" style="max-height: 300px;">
+                                     alt="<?= $product['product_name'] ?>" class="img-responsive" style="max-height: 300px; width: auto;">
                             </a>
                             <div class="caption">
                                 <h3><strong><?= $product['product_name'] ?></strong></h3>
                                 <p>
-                                    Цена: <strong><?= $product['product_price'] ?></strong>
-                                    <small> грн.</small>
+                                    price: <strong><?= $product['product_price'] ?></strong>
+                                    <small> uah.</small>
                                 </p>
                                 <div class="clearfix">
                                     <a href="order.php?order=<?= $product['id'] ?>" class="btn btn-success pull-left"
-                                       role="button">Купить</a>
+                                       role="button">Buy</a>
                                     <a href="?delete_product&product_id=<?= $product['id'] ?>"
                                        class="btn btn-danger pull-right"
-                                       role="button">Удалить</a>
+                                       role="button">Remove</a>
                                 </div>
                             </div>
                         </div>
