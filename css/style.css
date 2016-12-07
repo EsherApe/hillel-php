@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    display: table;
+    height: 100%;
+}
+
+.content {
+    display: table-row;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.footer__copyright {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 40px 0;
+}
+
+.form-container {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/*additional classes*/
+
+.p-t-50 {
+    padding-top: 50px;
+}
+
+/*item view page*/
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}

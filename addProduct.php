@@ -1,5 +1,5 @@
 <?php
-    require_once "settings.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интернет магазин</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -34,41 +34,46 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="addProduct.php">Добавить товар</a></li>
+                            <li><a href="index.php">Главная</a></li>
                             <li><a href="ordersList.php">Заказы</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
-        <main class="main">
-            <h1 class="text-center">Смартфоны</h1>
-            <hr>
-            <div class="row">
-                <?php foreach ($db->getProducts() as $product): ?>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                            <a href="productView.php?productId=<?= $product['id'] ?>">
-                                <img src="img/Phones/<?= $product['product_img_link'] ?>"
-                                     alt="<?= $product['product_name'] ?>" class="img-responsive" style="max-height: 300px;">
-                            </a>
-                            <div class="caption">
-                                <h3><strong><?= $product['product_name'] ?></strong></h3>
-                                <p>
-                                    Цена: <strong><?= $product['product_price'] ?></strong>
-                                    <small> грн.</small>
-                                </p>
-                                <div class="clearfix">
-                                    <a href="order.php?order=<?= $product['id'] ?>" class="btn btn-success pull-left"
-                                       role="button">Купить</a>
-                                    <a href="?delete_product&product_id=<?= $product['id'] ?>"
-                                       class="btn btn-danger pull-right"
-                                       role="button">Удалить</a>
-                                </div>
-                            </div>
+        <main class="main p-t-50">
+            <div class="form-container">
+                <form action="index.php" method="POST" class="form" name="addProductForm">
+                    <?php if ($_SESSION['error']): ?>
+                        <div class="alert alert-danger">
+                            <?= $_SESSION['error'];
+                            unset($_SESSION['error']); ?>
+                        </div>
+                    <?php endif; ?>
+                    <h2>Добавьте товар!</h2>
+                    <div class="form-group">
+                        <label for="product_name">Название товара:</label>
+                        <input type="text" class="form-control" id="product_name" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_price">Цена:</label>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="product_price" id="product_price" required>
+                            <span class="input-group-addon">UAH</span>
                         </div>
                     </div>
-                <?php endforeach ?>
+                    <div class="form-group">
+                        <label for="product_desc">Краткое описание:</label>
+                        <textarea name="product_desc" id="product_desc" class="form-control" cols="30" rows="10"
+                                  required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_img_link">Ссылка на изображение:</label>
+                        <input type="text" name="product_img_link" id="product_img_link" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-default">Отправить</button>
+                </form>
             </div>
         </main>
     </div>
