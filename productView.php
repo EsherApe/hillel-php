@@ -45,9 +45,9 @@ require_once "settings.php";
             <main class="main">
                 <div class="thumbnail">
                     <?php $product = $db->getProductItem($_GET['productId']); ?>
-                    <img class="img-thumbnail" src="img/phones/<?= $product['product_img_link'] ?>" alt="">
+                    <img class="img-normal" src="img/phones/<?= $product['product_img_link'] ?>" alt="<?= $product['product_name'] ?>" style="width: auto;">
                     <div class="caption-full">
-                        <h4 class="pull-right"><?= $product['product_price'] ?></h4>
+                        <h4 class="pull-right"><?= $product['product_price'] ?> UAH</h4>
                         <h4><a href="#"><?= $product['product_name'] ?></a></h4>
 
                         <p><?= $product['product_desc'] ?></p>
@@ -123,5 +123,7 @@ require_once "settings.php";
             <div class="footer__copyright text-center">@2016 all rights reserved</div>
         </footer>
     </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>

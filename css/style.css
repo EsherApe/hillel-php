@@ -36,6 +36,10 @@ h1 {
     padding-top: 50px;
 }
 
+.img-normal {
+    width: auto;
+}
+
 /*item view page*/
 
 .thumbnail img {

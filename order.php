@@ -42,8 +42,18 @@
                     </div><!-- /.container-fluid -->
                 </nav>
             </header>
-            <main class="main p-t-50">
-                <div class="order-form center-block" style="max-width: 600px;">
+            <main class="main">
+                <div class="thumbnail col-sm-6">
+                    <?php $product = $db->getProductItem($_GET['order']); ?>
+                    <img class="img-normal" src="img/phones/<?= $product['product_img_link'] ?>" alt="<?= $product['product_name'] ?>" style="width: auto;">
+                    <div class="caption-full">
+                        <h4 class="pull-right"><?= $product['product_price'] ?> UAH</h4>
+                        <h4><a href="#"><?= $product['product_name'] ?></a></h4>
+
+                        <p><?= $product['product_desc'] ?></p>
+                    </div>
+                </div>
+                <div class="order-form center-block col-sm-6" style="max-width: 600px;">
                     <form action="" method="post" role="form">
                         <?php if ($_SESSION['error']): ?>
                             <div class="alert alert-danger">
@@ -52,25 +62,29 @@
                             </div>
                         <?php endif; ?>
 
-                        <h2>Форма заказа номера</h2>
+                        <h2>Order form!</h2>
 
                         <div class="form-group">
-                            <label for="userName"></label>
+                            <label for="userName">Enter your Name</label>
                             <input type="text" class="form-control" name="user_name" id="userName" placeholder="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="userSurname"></label>
-                            <input type="text" class="form-control" name="user_surname" id="userSurname" placeholder="surname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="userPhone"></label>
+                            <label for="userPhone">Enter your phone number</label>
                             <input type="tel" class="form-control" name="user_phone" id="userPhone" placeholder="phone" required>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" name="room_id" id="roomId" value="<?= $_GET['order'] ?>">
+                            <label for="userEmail">Enter your Email</label>
+                            <input type="email" class="form-control" name="user_email" id="userEmail" placeholder="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productAmount">Amount of goods:</label>
+                            <input type="number" class="form-control" name="product_amount" id="productAmount" placeholder="amount">
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" name="product_id" id="productId" value="<?= $_GET['order'] ?>">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Заказать</button>
+                        <button type="submit" class="btn btn-success center-block btn-block">order</button>
                     </form>
                 </div>
             </main>

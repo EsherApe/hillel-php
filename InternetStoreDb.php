@@ -128,20 +128,4 @@ class InternetStoreDb {
         $query->bindValue(':amount', $product_amount);
         return $query->execute();
     }
-
-    /**
-     * @return array
-     */
-    /*public function getOrders()
-    {
-        $resultOrders = [];
-        try {
-            $sqlOrders = "SELECT user_name, user_surname, user_phone, hotel.hotel_name FROM orders AS `order` INNER JOIN Phones AS `hotel` ON hotel.id = order.room_id";
-            $resultOrders = $this->pdo->query($sqlOrders);
-        } catch (PDOException $e) {
-            echo "ошибка при извлечении записей <br>";
-            echo $e->getMessage();
-        }
-        return $resultOrders;
-    }*/
 }

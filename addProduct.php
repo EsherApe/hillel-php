@@ -35,13 +35,12 @@ session_start();
 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.php">Main</a></li>
-                            <li><a href="ordersList.php">Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
-        <main class="main p-t-50">
+        <main class="main">
             <div class="form-container">
                 <form action="index.php" method="POST" class="form" name="addProductForm">
                     <?php if ($_SESSION['error']): ?>

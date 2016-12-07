@@ -35,7 +35,6 @@
 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="addProduct.php">Add product</a></li>
-                            <li><a href="ordersList.php">Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
