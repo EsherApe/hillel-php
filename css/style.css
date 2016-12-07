@@ -1,0 +1,10 @@
+html, body, .jumbotron {
+    height: 100%;
+}
+.jumbotron {
+    margin-bottom: 0;
+}
+.thumbnail {
+    max-width: 600px;
+    margin: 0 auto;
+}
