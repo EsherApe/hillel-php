@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How the Web works</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="container__align">
+            <header class="header">
+                <nav class="nav">
+                    <ul class="main-menu">
+                        <li><a class="main-menu__link" href="index.html">What is Internet</a></li>
+                        <li><a class="main-menu__link main-menu__link--active" href="web.html">What is Web</a></li>
+                        <li><a class="main-menu__link" href="contacts.html">Report an issue</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="content">
+                <h1 class="main-title"><span class="main-title__first-word">How</span> the <span
+                        class="main-title__last-word">Web works?</span></h1>
+                <section class="section">
+                    <h2 class="section__title">Clients and servers</h2>
+
+                    <div class="section__content">
+                        <p>Computers connected to the Web are called clients and servers. A simplified diagram of how
+                            they
+                            interact might look like this:</p>
+
+                        <img src="img/Client-server.jpg" alt="client-server" class="section__img">
+                        <ul class="section__list">
+                            <li>Clients are the typical Web user's Internet-connected devices (for example, your
+                                computer
+                                connected to your Wi-Fi, or your phone connected to your mobile network) and
+                                Web-accessing
+                                software available on those devices (usually a web browser like Firefox or Chrome).
+                            </li>
+                            <li>Servers are computers that store webpages, sites, or apps. When a client device wants to
+                                access a webpage, a copy of the webpage is downloaded from the server onto the client
+                                machine to be displayed in the user's web browser.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section__title">The other parts of the toolbox</h2>
+
+                    <div class="section__content">
+                        <p>The client and server we've described above don't tell the whole story. There are many other
+                            parts involved, and we'll describe them below.</p>
+
+                        <p>For now, let's imagine that the Web is a road. On one end of the road is the client, which is
+                            like your house. On the other end of the road is the server, which is a shop you want to buy
+                            something from.</p>
+
+                        <img src="img/road.jpg" alt="road" class="section__img">
+
+                        <p>In addition to the client and the server, we also need to say hello to:</p>
+                        <ul class="section__list">
+                            <li><b>Your Internet connection:</b> Allows you to send and receive data on the Web. It's
+                                basically like the street between your house and the shop.
+                            </li>
+                            <li><b>TCP/IP:</b> Transmission Control Protocol and Internet Protocol are communication
+                                protocols that define how data should travel across the Web. This is like the transport
+                                mechanisms that let you to place an order, go to the shop, and buy your goods. In our
+                                example, this is like a car or a bike (or your own two feet).
+                            </li>
+                            <li><b>DNS:</b> Domain Name System Servers are like an address book for websites. When you
+                                type
+                                a web address in your browser, the browser looks at the DNS before retrieving the
+                                website.
+                                The browser needs to find out which server the website lives on, so it can send HTTP
+                                messages to the right place (see below). This is like looking up the address of the shop
+                                so
+                                you can access it.
+                            </li>
+                            <li><b>HTTP:</b> Hypertext Transfer Protocol is an application protocol that defines a
+                                language
+                                for clients and servers to speak to each other. This is like the language you use to
+                                order
+                                your goods.
+                            </li>
+                            <li><b>Component files:</b> A website is made up of many different files, which are like the
+                                different
+                                parts of the goods you buy from the shop. These files come in two main types:
+                                <ul>
+                                    <li><b>Code files:</b> Websites are built primarily from HTML, CSS, and JavaScript,
+                                        though you'll meet other technologies a bit later.
+                                    </li>
+                                    <li><b>Assets:</b> This is a collective name for all the other stuff that makes up a
+                                        website, such as images, music, video, Word documents, and PDFs.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section__title">So what happens, exactly?</h2>
+
+                    <div class="section__content">
+                        <p>When you type a web address into your browser (for our analogy that's like walking to the
+                            shop):</p>
+                        <ol class="section__list">
+                            <li>The browser goes to the DNS server and finds the real address of the server that the
+                                website
+                                lives on (you find the address of the shop).
+                            </li>
+                            <li>The browser sends an HTTP request message to the server asking it to send a copy of the
+                                website to the client (you go to the shop and order your goods). This message, and all
+                                other
+                                data sent between the client and the server, is sent across your internet connection
+                                using
+                                TCP/IP.
+                            </li>
+                            <li>Provided the server approves the client's request, the server sends the client a "200
+                                OK"
+                                message, which means "Of course you can look at that website! Here it is", and then
+                                starts
+                                sending the website's files to the browser as a series of small chunks called data
+                                packets
+                                (the shop gives you your goods, and you bring them back to your house).
+                            </li>
+                            <li>The browser assembles the small chunks into a complete website and displays it to you
+                                (the
+                                goods arrive at your door — new stuff, awesome!).
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section__title">DNS explained</h2>
+
+                    <div class="section__content">
+                        <p>Real web addresses aren't the nice, memorable strings you type into your address bar to find
+                            your
+                            favorite websites. They are strings of numbers, like this: 63.245.217.105.</p>
+
+                        <p>This is called an IP address, and it represents a unique location on the Web. However, it's
+                            not
+                            very easy to remember, is it? That's why Domain Name Servers were invented. These are
+                            special
+                            servers that match up a web address you type into your browser (like "mozilla.org") to the
+                            website's real (IP) address.</p>
+
+                        <p>Websites can be reached directly via their IP addresses. Try going to the Mozilla website by
+                            typing 63.245.217.105 into the address bar on a new browser tab.</p>
+
+                        <img src="img/dns-ip(1).png" alt="" class="section__img">
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section__title">Packets explained</h2>
+
+                    <div class="section__content">
+                        <p>Earlier we used the term "packets" to describe the format in which the data is sent from
+                            server
+                            to client. What do we mean here? Basically, when data is sent across the Web, it is sent as
+                            thousands of small chunks, so that many different web users can download the same website at
+                            the
+                            same time. If web sites were sent as single big chunks, only one user could download one at
+                            a
+                            time, which obviously would make the Web very inefficient and not much fun to use.</p>
+                    </div>
+                </section>
+                <section class="section section--align-right">
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" class="section__link section__link--source">View source on MDN</a>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__copyright">Copyright © 2016 Bazilskiy.task-1 <br> All rights reserved</div>
+    </footer>
+</div>
+</body>
+</html>

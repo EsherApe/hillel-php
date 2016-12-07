@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About me!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="container__align">
+            <header class="header">
+                <nav class="nav">
+                    <ul class="main-menu">
+                        <li><a class="main-menu__link" href="index.html">What is Internet</a></li>
+                        <li><a class="main-menu__link" href="web.html">What is Web</a></li>
+                        <li><a class="main-menu__link main-menu__link--active" href="contacts.html">Report an issue</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="content">
+                <h1 class="main-title"><span class="main-title__first-word">Report</span> an <span
+                        class="main-title__last-word">issue!</span></h1>
+                <section class="section">
+                    <h2 class="section__title">Articles issues</h2>
+
+                    <div class="section__content">
+                        <p>If you see a problem in the articles!</p>
+                        <button class="report-btn" id="reportBtn">report the issue!</button>
+                    </div>
+                    <div class="section__img"></div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__copyright">Copyright © 2016 Bazilskiy.task-1 <br> All rights reserved</div>
+    </footer>
+    <div class="report-form" id="reportForm">
+            <form action="" method="POST" role="form">
+                <div class="report-form__group">
+                    <legend class="report-form__legend">Report form</legend>
+                    <div class="close-btn" id="reportClose">×</div>
+                </div>
+                <div class="report-form__group">
+                    <label for="reportName" class="report-form__label">Your name:</label>
+                    <input type="text" class="report-form__control" name="reportName" id="reportName" placeholder="enter your name">
+                </div>
+                <div class="report-form__group">
+                    <label for="reportEmail" class="report-form__label">Your email:</label>
+                    <input type="email" class="report-form__control" name="reportEmail" id="reportEmail" placeholder="enter your email">
+                </div>
+                <div class="report-form__group">
+                    <label for="reportMessage" class="report-form__label">Write your message:</label>
+                    <textarea name="reportMessage" id="reportMessage" cols="30" rows="10" class="report-form__control"></textarea>
+                </div>
+
+                <button type="submit" class="report-form__submit">Submit</button>
+            </form>
+        </div>
+
+    <div class="backdrop" id="backdrop"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
