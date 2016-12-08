@@ -7,16 +7,20 @@ html, body {
     height: 100%;
 }
 
+.main {
+    padding-bottom: 40px;
+}
+
 .content {
     display: table-row;
     height: 100%;
-    padding-bottom: 50px;
 }
 
 .footer__copyright {
     padding: 15px;
-    background-color: #333;
-    color: #fff;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    color: #777;
     border-radius: 5px;
 }
 
@@ -36,8 +40,9 @@ h1 {
     padding-top: 50px;
 }
 
-.img-normal {
+.thumbnail .img-normal {
     width: auto;
+    padding: 20px 0;
 }
 
 /*item view page*/

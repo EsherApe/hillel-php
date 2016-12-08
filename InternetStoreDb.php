@@ -35,6 +35,9 @@ class InternetStoreDb {
 
             $sql = "CREATE TABLE IF NOT EXISTS orders (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(255), user_phone VARCHAR(255), user_email VARCHAR(255), product_id INT NOT NULL, product_amount INT NOT NULL) DEFAULT CHARACTER SET utf8 ENGINE=InnoDB";
             $this->pdo->exec($sql);
+
+            $sql = "CREATE TABLE IF NOT EXISTS reviews (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, review_user_name VARCHAR(255), review_text VARCHAR(255), product_id INT NOT NULL) DEFAULT CHARACTER SET utf8 ENGINE=InnoDB";
+            $this->pdo->exec($sql);
         } catch (PDOException $e) {
             echo "Ошибка при создании таблицы!<br>";
             echo $e->getMessage();
@@ -69,6 +72,43 @@ class InternetStoreDb {
         try {
             $sql = "SELECT id, product_name, product_price, product_desc, product_img_link FROM products";
             $result = $this->pdo->query($sql);
+        } catch (PDOException $e) {
+            echo "ошибка при извлечении записей <br>";
+            echo $e->getMessage();
+        }
+        return $result;
+    }
+
+    /**
+     * @param $name
+     * @param $review
+     * @param $productId
+     * @return bool
+     */
+    public function addReview($name, $review, $productId)
+    {
+        $sql = 'INSERT INTO reviews SET review_user_name = :name, review_text = :review, product_id = :id, review_date = :date';
+
+        $query = $this->pdo->prepare($sql);
+        $query->bindValue(':name', $name);
+        $query->bindValue(':review', $review);
+        $query->bindValue(':id', $productId);
+        $query->bindValue(':date', date('Y-m-d H:i:s'));
+        return $query->execute();
+    }
+
+    /**
+     * @return array
+     */
+    public function getReviews($id)
+    {
+        $result = [];
+        try {
+            $sql = "SELECT review_user_name, review_text, review_date FROM reviews WHERE product_id = :id";
+            $query = $this->pdo->prepare($sql);
+            $query->bindValue(':id', $id, PDO::PARAM_INT);
+            $query->execute();
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "ошибка при извлечении записей <br>";
             echo $e->getMessage();

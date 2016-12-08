@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интернет магазин</title>
+    <title>SmartStore</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -49,7 +49,8 @@
                         <div class="thumbnail">
                             <a href="productView.php?productId=<?= $product['id'] ?>">
                                 <img src="img/Phones/<?= $product['product_img_link'] ?>"
-                                     alt="<?= $product['product_name'] ?>" class="img-responsive" style="max-height: 300px; width: auto;">
+                                     alt="<?= $product['product_name'] ?>" class="img-responsive"
+                                     style="max-height: 300px; width: auto;">
                             </a>
                             <div class="caption">
                                 <h3><strong><?= $product['product_name'] ?></strong></h3>
@@ -59,7 +60,7 @@
                                 </p>
                                 <div class="clearfix">
                                     <a href="order.php?order=<?= $product['id'] ?>" class="btn btn-success pull-left"
-                                       role="button">Buy</a>
+                                       role="button">Buy it quick</a>
                                     <a href="?delete_product&product_id=<?= $product['id'] ?>"
                                        class="btn btn-danger pull-right"
                                        role="button">Remove</a>
@@ -75,6 +76,9 @@
         <div class="footer__copyright text-center">@2016 all rights reserved</div>
     </footer>
 </div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <!-- Latest compiled and minified JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>

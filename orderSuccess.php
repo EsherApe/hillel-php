@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "settings.php";
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SmartStore</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -34,45 +34,18 @@ session_start();
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.php">Main</a></li>
+                            <li><a href="addProduct.php">Add product</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
         <main class="main">
-            <div class="form-container">
-                <form action="index.php" method="POST" class="form" name="addProductForm">
-                    <?php if ($_SESSION['error']): ?>
-                        <div class="alert alert-danger">
-                            <?= $_SESSION['error'];
-                            unset($_SESSION['error']); ?>
-                        </div>
-                    <?php endif; ?>
-                    <h2>Add product!</h2>
-                    <div class="form-group">
-                        <label for="product_name">Product name:</label>
-                        <input type="text" class="form-control" id="product_name" name="product_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="product_price">Price:</label>
-
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="product_price" id="product_price" required>
-                            <span class="input-group-addon">UAH</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="product_desc">Description:</label>
-                        <textarea name="product_desc" id="product_desc" class="form-control" cols="30" rows="10"
-                                  required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="product_img_link">Image link:</label>
-                        <input type="text" name="product_img_link" id="product_img_link" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn btn-default">Add product</button>
-                </form>
+            <div class="text-center">
+                <div class="alert alert-success text-center">
+                    <h1>Your order have been complete with success!</h1>
+                    <h3><a href="index.php">Return to the main page!</a></h3>
+                </div>
             </div>
         </main>
     </div>
@@ -80,9 +53,6 @@ session_start();
         <div class="footer__copyright text-center">@2016 all rights reserved</div>
     </footer>
 </div>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
 <!-- Latest compiled and minified JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
