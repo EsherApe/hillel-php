@@ -2,18 +2,25 @@
 
 require_once "settings.php";
 
-/*set cookie*/
 $lastViewed = $_COOKIE['lastViewed'];
+/*if cookie is set - decode it from string to array*/
 if (strlen($lastViewed) > 0) {
     $lastViewed = json_decode($lastViewed);
 } else {
     $lastViewed = [];
 }
 
+/*if element not in array save it*/
 if (!in_array((int)$_GET['productId'], $lastViewed)) {
     $lastViewed[] = (int)$_GET['productId'];
 }
 
+/*remove first element of array because we save only last 4 viewed items*/
+if (count($lastViewed) > 4) {
+    array_shift($lastViewed);
+}
+
+/*set cookie, encode array to json*/
 setcookie('lastViewed', json_encode($lastViewed));
 
 ?>
@@ -133,8 +140,7 @@ setcookie('lastViewed', json_encode($lastViewed));
                         <div class="row">
                             <h2>Recently viewed</h2><hr>
                             <div class="row">
-                                <!--iterate last viewed products since the penultimate product in array-->
-                                <?php for($i = count($lastViewed) - 2; $i >= count($lastViewed) - 5; $i--): ?>
+                                <?php for($i = 0; $i < count($lastViewed); $i++): ?>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
                                         <?php $product = $db->getProductItem($lastViewed[$i]); ?>
