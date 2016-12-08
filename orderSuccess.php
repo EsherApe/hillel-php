@@ -53,6 +53,10 @@ require_once "settings.php";
         <div class="footer__copyright text-center">@2016 all rights reserved</div>
     </footer>
 </div>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <!-- Latest compiled and minified JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
