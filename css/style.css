@@ -1,0 +1,26 @@
+body {
+    background-color: #607d8b;
+}
+
+.main-contaner {
+    padding-top: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-title {
+    color: #fff;
+}
+
+.publication-item {
+    background-color: #fff;
+    border-radius: 5px;
+    border-bottom: 2px solid #fff;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+}
+
+.jumbotron {
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #343738;
+}
