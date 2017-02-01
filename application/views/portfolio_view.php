@@ -10,9 +10,9 @@
 
     <?php foreach ($data as $row):?>
         <tr>
-            <td><?= $row['Year'] ?></td>
-            <td><a href="<?= $row['Site'] ?>"><?= $row['Site'] ?></a></td>
-            <td><?= $row['Description'] ?></td>
+            <td><?= $row['year'] ?></td>
+            <td><a href="<?= $row['url'] ?>"><?= $row['url'] ?></a></td>
+            <td><?= $row['description'] ?></td>
         </tr>
     <?php endforeach; ?>
 

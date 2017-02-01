@@ -4,10 +4,9 @@
 class Controller_Portfolio extends Controller
 {
 
-    function __construct()
+    public function init()
     {
         $this->model = new Model_Portfolio();
-        $this->view = new View();
     }
 
     function action_index()
