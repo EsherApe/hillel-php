@@ -1,3 +1,30 @@
+#Домашнее задание 19
+Создать файл миграций создающий следующие таблицы интернет магазина:
+
+Products(Товары):
+
+id 
+title (Назвние)
+alias (Название латиницей)
+price (Цена)
+description (Описание товара)
+Заказы:
+
+id
+customer_name(Имя клиента)
+email
+phone(Телефон)
+feedback(Отзыв)
+Pages:
+
+id
+title(заголовок)
+alias(название латиницей)
+content(Текстовое содержимое страницы)
+Создать Модели. Ввести тестовые данные и отобразить с использованием контроллеров и представлений.
+
+##framework info
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
