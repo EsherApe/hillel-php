@@ -28,10 +28,10 @@
                         <a href="/products">Products</a>
                     </li>
                     <li>
-                        <a href="#">Orders</a>
+                        <a href="/orders">Orders</a>
                     </li>
                     <li>
-                        <a href="#">Pages</a>
+                        <a href="/pages">Pages</a>
                     </li>
                 </ul>
             </div>

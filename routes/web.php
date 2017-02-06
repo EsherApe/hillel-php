@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/products', 'ProductsController@index');
+
+Route::get('/orders', 'OrdersController@index');
+
+Route::get('/pages', 'PagesController@index');
