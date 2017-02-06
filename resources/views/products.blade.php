@@ -11,7 +11,7 @@
                 <p>{{ $product->description }}</p>
             </div>
             <h4>Price: £{{ $product->price }}</h4>
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-info" href="/products/{{ $product->alias }}" role="button">View details »</a></p>
         </div>
     @endforeach
 @stop

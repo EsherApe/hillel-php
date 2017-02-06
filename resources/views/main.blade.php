@@ -11,6 +11,7 @@
     </div>
 
     <div class="col-xs-12">
+        <h3>About me!</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus adipisci atque blanditiis, delectus
             dolores esse eum fugiat impedit in inventore ipsam labore laboriosam minima molestiae non placeat porro
             possimus quo ratione sint tempora temporibus, veritatis voluptate voluptatem. Consectetur dolores ea eveniet
