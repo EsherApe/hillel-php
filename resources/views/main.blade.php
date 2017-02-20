@@ -10,8 +10,17 @@
     </div>
 
     <div class="container">
-        <p><span class="main__quote">"</span> Programmers seem to have stopped reading books. The market for books on
-            programming topics is minuscule compared to the number of working programmers. Instead, they happily program
-            away, using trial-and-error. When they can’t figure something out, they type a question into Google.</p>
+        <blockquote>
+            <p>
+                Programmers seem to have stopped reading books. The market for books on
+                programming topics is minuscule compared to the number of working programmers. Instead, they happily
+                program
+                away, using trial-and-error. When they can’t figure something out, they type a question into Google.
+            </p>
+        </blockquote>
     </div>
+
+    <br><br><br>
+
+    <h1 class="text-center">@lang('auth.throttle', ['seconds' => '60'])</h1>
 @stop

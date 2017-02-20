@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
     <!-- Scripts -->
     <script>
@@ -37,7 +37,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <strong>{{ config('app.name', 'BookStore') }}</strong>
                 </a>
             </div>
 
@@ -93,6 +93,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="/js/app.js"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
