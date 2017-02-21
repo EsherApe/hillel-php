@@ -10,4 +10,9 @@ class Product extends Model
     {
         return 'alias';
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }

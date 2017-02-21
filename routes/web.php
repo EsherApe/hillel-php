@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/products', 'ProductsController@index');
-
 Route::get('/products/{product}', 'ProductsController@show');
 
 Route::get('/orders', 'OrdersController@index');
+Route::get('/make_order/{product}', 'OrdersController@store');
 
 Route::get('/pages', 'PagesController@index');
 
