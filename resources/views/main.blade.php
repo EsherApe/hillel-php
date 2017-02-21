@@ -19,8 +19,4 @@
             </p>
         </blockquote>
     </div>
-
-    <br><br><br>
-
-    <h1 class="text-center">@lang('auth.throttle', ['seconds' => '60'])</h1>
 @stop
