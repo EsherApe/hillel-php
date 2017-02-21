@@ -12,11 +12,16 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: #333;
+}
+
 blockquote {
   margin: 20px 40px;
   padding: 0;
   border: 0;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #fff;
   :before {
     content: "\201C";
     display: block;
@@ -25,5 +30,27 @@ blockquote {
     left: -38px;
     font-size: 6.5rem;
 
+  }
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+.main-title {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.product {
+  margin-bottom: 50px;
+  &__content {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+  }
+  &__img {
+    max-width: 197px;
+    margin: 0 auto;
   }
 }

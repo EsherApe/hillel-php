@@ -92,6 +92,10 @@
     @yield('content')
 </div>
 
+<footer class="text-center">
+    (c) all rights reserved
+</footer>
+
 <!-- Scripts -->
 <script src="{{ mix('/js/app.js') }}"></script>
 </body>
