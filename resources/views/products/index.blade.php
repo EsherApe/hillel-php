@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="container">
-        <div class="co-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="co-xs-12 col-sm-8 col-sm-offset-2">
             <h1 class="main-title">The 9 Best Programming Books to Read Right Now if You Want to Distinguish Yourself</h1>
 
         </div>
         @foreach($products as $product)
             <div class="product clearfix">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                     <div class="product__content">
                         <div class="product__img-box">
                             <img src="{{ $product->img_url }}" alt="" class="product__img img-responsive">

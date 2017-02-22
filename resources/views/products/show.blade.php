@@ -12,7 +12,7 @@
                     <p>{{ $product->description }}</p>
                 </div>
                 <h4 class="product__price">Price: ${{ $product->price }}</h4>
-                <p><a class="btn btn-success" href="/make_order/{{ $product->alias }}" role="button">Buy »</a></p>
+                <p><a class="btn btn-success" href="/orders/{{ $product->alias }}" role="button">Buy »</a></p>
             </div>
         </div>
     </div>

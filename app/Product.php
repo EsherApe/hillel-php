@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    public $guarded = ['status'];
+
     public function getRouteKeyName()
     {
         return 'alias';

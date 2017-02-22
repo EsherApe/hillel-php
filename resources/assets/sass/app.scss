@@ -33,8 +33,19 @@ blockquote {
   }
 }
 
+%containerStyle {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+}
+
 .jumbotron {
   background-color: #fff;
+}
+
+.order-form,
+.add-product-form {
+  @extend %containerStyle;
 }
 
 .main-title {
@@ -45,9 +56,7 @@ blockquote {
 .product {
   margin-bottom: 50px;
   &__content {
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 5px;
+    @extend %containerStyle;
   }
   &__img {
     max-width: 197px;

@@ -62,6 +62,7 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        <li><a href="/products/add">Add book</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
@@ -92,7 +93,7 @@
     @yield('content')
 </div>
 
-<footer class="text-center">
+<footer class="col-xs-12 text-center">
     (c) all rights reserved
 </footer>
 
