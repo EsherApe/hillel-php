@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'BookStore') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+    <link rel="stylesheet" href="/css/app.css">
 
     <!-- Scripts -->
     <script>
@@ -97,6 +97,6 @@
 </footer>
 
 <!-- Scripts -->
-<script src="{{ mix('/js/app.js') }}"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>
